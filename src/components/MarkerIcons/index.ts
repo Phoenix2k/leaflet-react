@@ -1,18 +1,12 @@
-import L from 'leaflet';
+import { blue, green, red, yellow } from '@material-ui/core/colors';
+import { MarkerIcons } from '../../types';
+import SVGMarkerIcon from '../SVGMarkerIcon';
 
-const greenMarkerIcon = new L.Icon({
-  iconAnchor: [5, 55],
-  iconRetinaUrl: '../icon-marker-green.svg',
-  iconSize: [30, 40],
-  iconUrl: '../icon-marker-green.svg',
-  popupAnchor: [10, -44],
-  shadowAnchor: [20, 92],
-  shadowSize: [68, 95],
-  shadowUrl: ''
-});
-
-export const markerIcons = {
-  green: greenMarkerIcon
+export const markerIcons: MarkerIcons = {
+  blue: SVGMarkerIcon({ fillColor: blue[500] }),
+  green: SVGMarkerIcon({ fillColor: green[500] }),
+  red: SVGMarkerIcon({ fillColor: red[500] }),
+  yellow: SVGMarkerIcon({ fillColor: yellow[500] })
 };
 
 export default markerIcons;

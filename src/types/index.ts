@@ -1,7 +1,6 @@
 import { ThemeOptions } from '@material-ui/core';
-import Leaflet from 'leaflet';
-import React, { ReactNode } from 'react';
-import markerIcons from '../components/MarkerIcons';
+import Leaflet, { DivIcon } from 'leaflet';
+import { ReactNode } from 'react';
 
 export interface Config {
   a11yEnv: Array<string>;
@@ -30,12 +29,6 @@ export interface EmotionTheme {
   };
 }
 
-export interface Marker {
-  icon: keyof typeof markerIcons;
-  position: Leaflet.LatLngTuple;
-  popup?: JSX.Element;
-}
-
 export interface MapProps {
   attribution: string;
   lat: number;
@@ -56,11 +49,21 @@ export interface MapState {
   zoom: number;
 }
 
-export interface NavLinkProps {
-  children?: ReactNode;
-  href: string;
-  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+export interface Marker {
+  color: MarkerIconColor;
+  position: Leaflet.LatLngTuple;
+  popup?: JSX.Element;
 }
+
+export const markerIconColors = ['blue', 'green', 'red', 'yellow'] as const;
+
+export type MarkerIconColors = typeof markerIconColors;
+
+export type MarkerIconColor = MarkerIconColors[number];
+
+export type MarkerIcons = {
+  [key in MarkerIconColor]: DivIcon;
+};
 
 export interface Page {
   navLabel: string;
@@ -71,4 +74,13 @@ export interface Page {
 
 export interface Pages {
   [key: string]: Page;
+}
+
+export interface SVGMarkerProps {
+  fillColor: string;
+  height: number;
+  innerFillColor: string;
+  outerFillColor: string;
+  ringFillColor: string;
+  width: number;
 }

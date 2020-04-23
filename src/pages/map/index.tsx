@@ -32,11 +32,11 @@ const MapPage: NextPage = () => {
   const [mapState] = useState({
     attribution:
       '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    lat: 60.1019,
-    lng: 24.5629,
+    lat: 60.1738,
+    lng: 24.9381,
     markers: [
       {
-        icon: 'green',
+        color: 'green',
         popup: (
           <Card className={classes.root}>
             <CardActionArea>
@@ -83,7 +83,7 @@ const MapPage: NextPage = () => {
             </CardActions>
           </Card>
         ),
-        position: [60.1019, 24.5629]
+        position: [60.1718, 24.9392]
       }
     ],
     maxZoom: 20,

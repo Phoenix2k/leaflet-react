@@ -20,7 +20,7 @@ const Markers: React.FunctionComponent<MapProps> = ({
       <LeafletMap animate={true} center={mapCenter} maxZoom={maxZoom} zoom={zoom}>
         <TileLayer attribution={attribution} url={url} />
         {markers.map((marker, markerIndex) => (
-          <Marker icon={markerIcons[marker.icon]} key={markerIndex} position={marker.position}>
+          <Marker icon={markerIcons[marker.color]} key={markerIndex} position={marker.position}>
             {marker.popup && <Popup>{marker.popup}</Popup>}
           </Marker>
         ))}
