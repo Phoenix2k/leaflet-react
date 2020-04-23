@@ -752,7 +752,7 @@ initialize {
               },
               "children": Array [
                 Object {
-                  "data": "Map",
+                  "data": "Color markers",
                   "next": null,
                   "parent": [Circular],
                   "prev": null,
@@ -833,7 +833,7 @@ initialize {
                 },
                 "children": Array [
                   Object {
-                    "data": "Map",
+                    "data": "Color markers",
                     "next": null,
                     "parent": [Circular],
                     "prev": null,
@@ -899,7 +899,7 @@ initialize {
             },
             "children": Array [
               Object {
-                "data": "Map",
+                "data": "Color markers",
                 "next": null,
                 "parent": [Circular],
                 "prev": null,
@@ -980,7 +980,7 @@ initialize {
               },
               "children": Array [
                 Object {
-                  "data": "Map",
+                  "data": "Color markers",
                   "next": null,
                   "parent": [Circular],
                   "prev": null,

@@ -31,17 +31,17 @@ Object {
     },
   },
   "pages": Object {
+    "colorMarkers": Object {
+      "navLabel": "Color markers",
+      "slug": "color-markers",
+      "title": "Color markers",
+      "url": "/color-markers",
+    },
     "home": Object {
       "navLabel": "Home",
       "slug": "home",
       "title": "Leaflet 🌱 React",
       "url": "/",
-    },
-    "map": Object {
-      "navLabel": "Map",
-      "slug": "map",
-      "title": "Map",
-      "url": "/map",
     },
   },
 }
