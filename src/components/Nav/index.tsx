@@ -37,11 +37,11 @@ const Nav: React.FunctionComponent = () => {
             </List>
             <Divider />
             <List>
-              <ListItem button onClick={() => router.push('/map')}>
+              <ListItem button onClick={() => router.push('/color-markers')}>
                 <ListItemIcon>
                   <RoomIcon />
                 </ListItemIcon>
-                <ListItemText primary="Map" />
+                <ListItemText primary="Color markers" />
               </ListItem>
             </List>
           </div>

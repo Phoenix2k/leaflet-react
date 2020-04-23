@@ -9,6 +9,7 @@ import { NextPage } from 'next';
 import dynamic, { LoaderComponent } from 'next/dynamic';
 import Head from 'next/head';
 import React, { useState } from 'react';
+import sitemap from '../../../data/sitemap.json';
 import DefaultLayout from '../../layouts/Default';
 import { MapProps, MapState } from '../../types';
 
@@ -27,7 +28,7 @@ const Markers = dynamic(() => import('../../components/Markers') as LoaderCompon
   ssr: false
 }) as React.FunctionComponent<MapProps>;
 
-const MapPage: NextPage = () => {
+const ColorMarkersPage: NextPage = () => {
   const classes = useStyles();
   const [mapState] = useState({
     attribution:
@@ -198,15 +199,15 @@ const MapPage: NextPage = () => {
   return (
     <DefaultLayout>
       <Head>
-        <title>Map</title>
-        <meta name="description" content="Leaflet example" />
+        <title>Color markers</title>
+        <meta name="description" content="Map of Helsinki featuring color markers" />
       </Head>
       <h1 itemProp="title" style={{ left: '-999em', position: 'absolute' }}>
-        Map
+        {sitemap.colorMarkers.title}
       </h1>
       <Markers {...mapState} />
     </DefaultLayout>
   );
 };
 
-export default MapPage;
+export default ColorMarkersPage;

@@ -5,13 +5,14 @@ import { createMount, createRender } from '@material-ui/core/test-utils';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles';
 import { ThemeProvider } from 'emotion-theming';
 import { NextRouter } from 'next/router';
+import sitemap from '../../../data/sitemap.json';
 import config from '../../../src/config';
-import Map from '../../../src/pages/map';
+import ColorMarkers from '../../../src/pages/color-markers';
 
 jest.mock('next/router', () => ({
   useRouter(): Partial<NextRouter> {
     return {
-      route: '/map'
+      route: '/color-markers'
     };
   }
 }));
@@ -24,11 +25,11 @@ describe('Map page', () => {
     const wrapper = mount(
       <ThemeProvider theme={config.emotion}>
         <MuiThemeProvider theme={materialUITheme}>
-          <Map />
+          <ColorMarkers />
         </MuiThemeProvider>
       </ThemeProvider>
     );
-    expect(wrapper.find('h1').text()).toEqual('Map');
+    expect(wrapper.find('h1').text()).toEqual(sitemap.colorMarkers.title);
   });
 
   it('matches snapshot', () => {
@@ -36,7 +37,7 @@ describe('Map page', () => {
     const snapshot = snapshotRender(
       <ThemeProvider theme={config.emotion}>
         <MuiThemeProvider theme={materialUITheme}>
-          <Map />
+          <ColorMarkers />
         </MuiThemeProvider>
       </ThemeProvider>
     );

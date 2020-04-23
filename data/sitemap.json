@@ -5,10 +5,10 @@
     "title": "Leaflet 🌱 React",
     "url": "/"
   },
-  "map": {
-    "navLabel": "Map",
-    "slug": "map",
-    "title": "Map",
-    "url": "/map"
+  "colorMarkers": {
+    "navLabel": "Color markers",
+    "slug": "color-markers",
+    "title": "Color markers",
+    "url": "/color-markers"
   }
 }

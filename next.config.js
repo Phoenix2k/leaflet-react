@@ -4,8 +4,8 @@ module.exports = {
       '/': {
         page: '/'
       },
-      '/map': {
-        page: '/map'
+      '/color-markers': {
+        page: '/color-markers'
       }
     };
   },
