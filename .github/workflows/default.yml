@@ -1,0 +1,45 @@
+name: GitHub workflow
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-test:
+    env:
+      CI: true
+    name: Build and run tests
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        node-version: ['13.x']
+        operating-system: [ubuntu-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Check code formatting
+        run: npm run prettier:check
+      - name: Check for errors
+        run: npm run lint
+      - name: Build project
+        run: npm run build
+      - name: Export static version
+        run: npm run export
+      - name: Run unit tests
+        uses: stefanoeb/jest-action@1.0.2
+        with:
+          jestArgs: --config '__tests__/jest/jest.config.js'
+      - name: Start server and run end-to-end tests
+        env:
+          CYPRESS_CI: true
+        uses: cypress-io/github-action@v1
+        with:
+          config-file: __tests__/cypress/cypress.json
+          start: npm start
+          wait-on: http://localhost:3000

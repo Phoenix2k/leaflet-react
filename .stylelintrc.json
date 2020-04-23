@@ -1,0 +1,18 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "ignoreFiles": ["src/theme/leaflet.ts"],
+  "rules": {
+    "declaration-block-trailing-semicolon": null,
+    "declaration-empty-line-before": null,
+    "no-empty-source": null,
+    "no-eol-whitespace": null,
+    "no-missing-end-of-source-newline": null,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": ["custom-elements", "default-namespace"]
+      }
+    ],
+    "value-keyword-case": null
+  }
+}

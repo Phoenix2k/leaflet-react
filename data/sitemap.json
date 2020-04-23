@@ -1,0 +1,14 @@
+{
+  "home": {
+    "navLabel": "Home",
+    "slug": "home",
+    "title": "Leaflet 🌱 React",
+    "url": "/"
+  },
+  "map": {
+    "navLabel": "Map",
+    "slug": "map",
+    "title": "Map",
+    "url": "/map"
+  }
+}

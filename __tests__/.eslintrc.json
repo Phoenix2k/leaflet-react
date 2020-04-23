@@ -1,0 +1,11 @@
+{
+  "env": {
+    "cypress/globals": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["../.eslintrc.json"],
+  "rules": {
+    "@typescript-eslint/ban-ts-ignore": 0
+  }
+}

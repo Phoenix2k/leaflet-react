@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Config matches snapshot 1`] = `
+Object {
+  "a11yEnv": Array [
+    "development",
+  ],
+  "emotion": Object {
+    "classes": Object {
+      "navLinkActive": "nav-link--active",
+    },
+    "colors": Object {
+      "backgroundColor": "rgb(255,255,255)",
+      "borderColor": "#ccc",
+      "color": "black",
+      "navLink": "blue",
+      "navLinkActive": "rgb(0, 128, 0)",
+    },
+    "typography": Object {
+      "sansSerif": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+    },
+  },
+  "materialUI": Object {
+    "palette": Object {
+      "primary": Object {
+        "main": "#4caf50",
+      },
+      "secondary": Object {
+        "main": "#2e7d32",
+      },
+    },
+  },
+  "pages": Object {
+    "home": Object {
+      "navLabel": "Home",
+      "slug": "home",
+      "title": "Leaflet 🌱 React",
+      "url": "/",
+    },
+    "map": Object {
+      "navLabel": "Map",
+      "slug": "map",
+      "title": "Map",
+      "url": "/map",
+    },
+  },
+}
+`;

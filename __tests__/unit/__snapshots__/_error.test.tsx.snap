@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error page matches snapshot 1`] = `
+<main
+  className="css-582lck"
+>
+  <h1
+    id="error-status-code"
+  >
+    Error
+  </h1>
+  <h2>
+    <code
+      id="error-code"
+    >
+      Unknown
+    </code>
+  </h2>
+  <a
+    href="/"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    Return to home page
+  </a>
+</main>
+`;
