@@ -50,7 +50,6 @@ const NextApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) =>
 
   useEffect(() => {
     const newPalette = prefersDarkMode ? 'dark' : 'light';
-    console.debug('Updating color scheme to:', newPalette);
     setPaletteType(newPalette);
   }, [prefersDarkMode, setPaletteType]);
 

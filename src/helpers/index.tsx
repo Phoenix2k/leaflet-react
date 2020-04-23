@@ -13,7 +13,6 @@ export const useLocalState = (defaultValue: string, key: string): [string, Dispa
   });
 
   useEffect(() => {
-    console.debug(`[Local storage] Storing new value for ${key}:`, value);
     window.localStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
 
