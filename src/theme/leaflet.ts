@@ -573,18 +573,18 @@ export const leafletStyles = (): SerializedStyles => css`
   }
 
   .leaflet-popup-content-wrapper {
-    padding: 1px;
+    /* MuiDisable padding: 1px; */
     text-align: left;
-    border-radius: 12px;
+    /* MuiDisable border-radius: 12px; */
   }
 
   .leaflet-popup-content {
-    margin: 13px 19px;
+    /* MuiDisable margin: 13px 19px; */
     line-height: 1.4;
   }
 
   .leaflet-popup-content p {
-    margin: 18px 0;
+    /* MuiDisable margin: 18px 0; */
   }
 
   .leaflet-popup-tip-container {
@@ -610,7 +610,7 @@ export const leafletStyles = (): SerializedStyles => css`
     transform: rotate(45deg);
   }
 
-  .leaflet-popup-content-wrapper,
+  /* MuiDisable .leaflet-popup-content-wrapper, */
   .leaflet-popup-tip {
     background: white;
     color: #333;
@@ -621,12 +621,13 @@ export const leafletStyles = (): SerializedStyles => css`
     position: absolute;
     top: 0;
     right: 0;
-    padding: 4px 4px 0 0;
+    /* MuiFix padding: 4px 4px 0 0; */
+    padding: 0.3em;
     border: none;
     text-align: center;
     width: 18px;
     height: 14px;
-    font: 16px/14px Tahoma, Verdana, sans-serif;
+    /* MuiDisable font: 16px/14px Tahoma, Verdana, sans-serif; */
     color: #c3c3c3;
     text-decoration: none;
     font-weight: bold;
