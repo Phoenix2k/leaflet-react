@@ -2,7 +2,7 @@
 
 > Playground for testing Leaflet features with React
 
-![GitHub workflow status][github-workflow-badge]
+![GitHub workflow status][workflow-badge] [![Language grade][lgtm-grade-badge]][lgtm-grade] [![Total alerts][lgtm-alerts-badge]][lgtm-alerts]
 
 ## What's included
 
@@ -71,11 +71,17 @@ Tests are are located in the [`__tests__`](./__tests__) folder.
 
 [emotion]: https://emotion.sh
 
-[github-workflow-badge]: https://github.com/Phoenix2k/leaflet-react/workflows/GitHub%20workflow/badge.svg
-
 [leaflet]: https://leafletjs.com/
 
 [leaflet-providers]: https://leaflet-extras.github.io/leaflet-providers/preview/
+
+[lgtm-alerts]: https://lgtm.com/projects/g/Phoenix2k/leaflet-react/alerts/
+
+[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/Phoenix2k/leaflet-react.svg?logo=lgtm&logoWidth=18
+
+[lgtm-grade]: https://lgtm.com/projects/g/Phoenix2k/leaflet-react/context:javascript
+
+[lgtm-grade-badge]: https://img.shields.io/lgtm/grade/javascript/g/Phoenix2k/leaflet-react.svg?logo=lgtm&logoWidth=18
 
 [license]: LICENSE.md
 
@@ -96,3 +102,5 @@ Tests are are located in the [`__tests__`](./__tests__) folder.
 [typescript]: https://www.typescriptlang.org/
 
 [wip-badge]: https://img.shields.io/badge/WIP-Work%20in%20progress-yellow
+
+[workflow-badge]: https://github.com/Phoenix2k/leaflet-react/workflows/GitHub%20workflow/badge.svg
