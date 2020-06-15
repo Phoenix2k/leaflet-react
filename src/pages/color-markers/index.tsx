@@ -13,22 +13,20 @@ import sitemap from '../../../data/sitemap.json';
 import DefaultLayout from '../../layouts/Default';
 import { MapProps, MapState } from '../../types';
 
-const useStyles = makeStyles({
-  media: {
-    height: 160
-  },
-
-  root: {
-    margin: '1.5em 0 !important',
-    maxWidth: '50vh'
-  }
-});
-
 const Markers = dynamic(() => import('../../components/Markers') as LoaderComponent, {
   ssr: false
 }) as React.FunctionComponent<MapProps>;
 
 const ColorMarkersPage: NextPage = () => {
+  const useStyles = makeStyles({
+    media: {
+      height: '12vh'
+    },
+
+    root: {
+      maxWidth: '50vh'
+    }
+  });
   const classes = useStyles();
   const [mapState] = useState({
     attribution:
