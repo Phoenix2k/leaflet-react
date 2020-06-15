@@ -6,7 +6,7 @@ import {
   ThemeOptions
 } from '@material-ui/core/styles';
 import { ThemeProvider } from 'emotion-theming';
-import { NextComponentType, NextPageContext } from 'next';
+import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
 import { ReactAxeConfig } from 'react-axe';
@@ -15,13 +15,6 @@ import manifest from '../../public/manifest.json';
 import config from '../config';
 import { useLocalState } from '../helpers';
 import { globalStyles, leafletStyles } from '../theme';
-
-interface AppProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Component: NextComponentType<NextPageContext, any, {}>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pageProps?: any;
-}
 
 /* istanbul ignore next */
 if (
